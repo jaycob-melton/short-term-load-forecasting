@@ -50,3 +50,14 @@ def merge_time_and_weather(load_df, weather_df):
     df = df.dropna()
     df = df.set_index("datetime").sort_index()
     return df.copy()
+
+
+def get_cleaned_data(
+    load_path="../data/raw/time_series_60min_singleindex.csv",
+    weather_path="../data/raw/weather_data.csv"
+):
+    load_df = load_ospd_time_series(load_path)
+    weather_df = load_ospd_weather_data(weather_path)
+    df = merge_time_and_weather(load_df, weather_df)
+    df.to_csv("../data/cleaned/cleaned_data.csv")
+    return df
