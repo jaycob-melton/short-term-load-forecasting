@@ -18,16 +18,24 @@ def feature_engineering(df):
   
   # Lag features
   df["load_t-1"] = df["load"].shift(1)
+  df["load_t-2"] = df["load"].shift(2)
+  df["load_t-3"] = df["load"].shift(3)
+  df["load_t-4"] = df["load"].shift(4)
   df["load_t-24"] = df["load"].shift(24)
-
+  
   # lag weather since we technically can't use weather at t to predict t
   df["temp_t-1"] = df["temp"].shift(1)
+  # df["temp_t-6"] = df["temp"].shift(6)
+  
   df["rad_direct_t-1"] = df["rad_direct"].shift(1)
+  # df["rad_direct_t-6"] = df["rad_direct"].shift(6)
+  
   df["rad_diffuse_t-1"] = df["rad_diffuse"].shift(1)
-
+  # df["rad_diffuse_t-6"] = df["rad_diffuse"].shift(6)
 
   # Rolling mean
   df["load_rolling_24h"] = df["load"].rolling(24).mean()
+  
 
   # Drop rows with NA values (from shift/roll)
   df = df.dropna()
