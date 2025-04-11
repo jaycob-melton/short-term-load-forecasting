@@ -7,16 +7,6 @@ Predict **hourly load** using historical load, weather variables (temperature, c
 
 ---
 
-## Skills Highlighted
-- Time series feature engineering (lags, calendar effects)
-- Model training & evaluation (baseline, linear regression, random forest, XGBoost)
-- Weather API integration with `meteostat`
-- Error analysis with MAE, RMSE, residual plots
-- Scalable pipeline design using modular Python scripts
-- Presentation-ready analysis notebook and slide deck
-
----
-
 ## Dependencies
 - Python (3.8)
 - Jupyter
