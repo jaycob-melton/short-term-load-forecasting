@@ -88,6 +88,7 @@ def train_lstm(model, train_loader, optimizer_params, num_epochs):
             
     train_loss /= len(train_loader.dataset)
     print(f'Epoch [{epoch+1}/{num_epochs}], Loss: {train_loss:.4f}')
+    return train_loss
 
 
 def test_lstm(model, test_loader, scaler):

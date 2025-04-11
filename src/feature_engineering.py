@@ -79,16 +79,16 @@ def feature_engineering_lstm(df):
   de_holidays = holidays.country_holidays("DE", years=range(min_year, max_year+1))
   df['is_holiday'] = df['date_only'].isin(de_holidays).astype(int)
   
-  df["load-1"] = df["load"].shift(1)
-  # lag weather since we technically can't use weather at t to predict t
-  df["temp_t-1"] = df["temp"].shift(1)
-  # df["temp_t-6"] = df["temp"].shift(6)
+  # df["load-1"] = df["load"].shift(1)
+  # # lag weather since we technically can't use weather at t to predict t
+  # df["temp_t-1"] = df["temp"].shift(1)
+  # # df["temp_t-6"] = df["temp"].shift(6)
   
-  df["rad_direct_t-1"] = df["rad_direct"].shift(1)
-  # df["rad_direct_t-6"] = df["rad_direct"].shift(6)
+  # df["rad_direct_t-1"] = df["rad_direct"].shift(1)
+  # # df["rad_direct_t-6"] = df["rad_direct"].shift(6)
   
-  df["rad_diffuse_t-1"] = df["rad_diffuse"].shift(1)
-  # df["rad_diffuse_t-6"] = df["rad_diffuse"].shift(6)
+  # df["rad_diffuse_t-1"] = df["rad_diffuse"].shift(1)
+  # # df["rad_diffuse_t-6"] = df["rad_diffuse"].shift(6)
 
   
 
@@ -96,8 +96,7 @@ def feature_engineering_lstm(df):
   df = df.dropna()
   y = df['load']
   df = df.drop(columns=['date_only', 'load', 'load_forecast', 'solar', 'solar_profile', 
-                        'wind', 'wind_profile', 'temp', 'rad_direct',
-                        'rad_diffuse', "dayofweek", "month"])
+                        'wind', 'wind_profile', "dayofweek", "month"])
   features = df.columns
   time_index = df.index
   return df.to_numpy(), y.to_numpy(), features.tolist(), time_index

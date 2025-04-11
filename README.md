@@ -3,7 +3,7 @@
 This project builds a short-term electricity **load forecasting model** using publicly available system demand data and weather forecasts.
 
 ## Project Goal
-Predict **next-day hourly load** using historical load, weather variables (temperature, cloud cover), and calendar features (day of week, holiday, etc.).
+Predict **hourly load** using historical load, weather variables (temperature, cloud cover), and calendar features (day of week, holiday, etc.).
 
 ---
 
@@ -17,20 +17,23 @@ Predict **next-day hourly load** using historical load, weather variables (tempe
 
 ---
 
-## Tech Stack
-- Python (3.10)
-- JupyterLab
-- pandas, scikit-learn, xgboost
-- meteostat for weather data
+## Dependencies
+- Python (3.8)
+- Jupyter
+- pandas, numpy, scikit-learn, xgboost, pytorch
+- ospd load and weather data
 - Visualizations with matplotlib/seaborn
 
 ---
 
 ## 📁 Folder Structure
 load-forecasting-mini-project/ 
-├── data/ # Raw + cleaned datasets 
+├── data/ # Raw + cleaned datasets
+
 ├── notebooks/ # EDA and modeling notebooks 
+
 ├── src/ # Data loaders, feature engineering, modeling 
-├── reports/ # PDF summary for interview 
+
 ├── env.yml # Conda environment 
+
 ├── README.md
