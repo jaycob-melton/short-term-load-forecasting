@@ -28,6 +28,7 @@ Predict **hourly load** using historical load, weather variables (temperature, c
 
 ## 📁 Folder Structure
 load-forecasting-mini-project/ 
+
 ├── data/ # Raw + cleaned datasets
 
 ├── notebooks/ # EDA and modeling notebooks 
