@@ -1,6 +1,6 @@
 # Short-Term Load Forecasting with Weather & Time Features
 
-This project builds a short-term electricity **load forecasting model** using publicly available system demand data and weather forecasts.
+This project builds a short-term electricity **load forecasting model** using publicly available system demand data and weather forecasts. Models used are Linear Regression, Ridge Regression, Random Forests, XGBoost, and LSTM Neural Networks.
 
 ## Project Goal
 Predict **hourly load** using historical load, weather variables (temperature, cloud cover), and calendar features (day of week, holiday, etc.).
