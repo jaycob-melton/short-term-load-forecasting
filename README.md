@@ -16,10 +16,10 @@ Predict **hourly load** using historical load, weather variables (temperature, c
 
 ---
 
-## 📁 Folder Structure
+## Folder Structure
 load-forecasting-mini-project/ 
 
-├── data/ # Raw + cleaned datasets
+├── data/ # Raw + cleaned datasets, add time_series_60min.csv and weather_data.csv from https://open-power-system-data.org/
 
 ├── notebooks/ # EDA and modeling notebooks 
 
